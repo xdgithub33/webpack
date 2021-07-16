@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "build": "webpack",
     "server": "node dev-server.js",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open --port 5000 --hot"
   },
   "keywords": [],
   "author": "",

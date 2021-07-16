@@ -16,7 +16,7 @@ module.exports = {
     // 浏览器自动加载页面
     devServer: {
         contentBase: './dist',// 坑 webpack-cli的新版本对webpack-dev-server版本的不兼容 npm i webpack-cli@3.3.12 -D
-        hot: true,  //模块热替换(Hot Module Replacement 或 HMR),它允许在运行时更新各种模块，而无需进行完全刷新
+        // hot: true,  //模块热替换(Hot Module Replacement 或 HMR),它允许在运行时更新各种模块，而无需进行完全刷新
     },
     plugins: [
         // 坑 不是数组 是对象参数
