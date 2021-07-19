@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "build": "webpack",
-    "server": "node dev-server.js",
-    "start": "webpack-dev-server --open --port 5000 --hot"
+    "serve-dev": "node dev-server.js",
+    "serve": "node server.js",
+    "start": "webpack-dev-server --open --port 5000 --hot",
+    "analyze": "cross-env NODE_ENV=production npm_config_report=true npm run build"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +23,9 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.0.0",
     "style-loader": "^3.1.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.44.0",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^3.11.2",

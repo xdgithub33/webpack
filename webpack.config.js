@@ -6,6 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //版本5.3.2 有问�
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //坑： 使用ES6解构语法
 const webpack = require('webpack');
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+// 分析包内容 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
     entry: {
         app: './src/index.js',
@@ -29,7 +34,9 @@ module.exports = {
             title: '热替换'
         }),
         // new webpack.NamedModulesPlugin(), //5.0已经内置
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new UglifyJsPlugin(),  //压缩
+        new BundleAnalyzerPlugin(), //分析包内容
 
     ],
     module: {
