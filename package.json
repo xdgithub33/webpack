@@ -5,10 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack",
-    "server": "node dev-server.js",
-    "start": "webpack-dev-server --open --port 5000 --hot"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config  webpack.dev.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +23,7 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
